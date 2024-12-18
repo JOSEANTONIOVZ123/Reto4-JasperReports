@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+                                  http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="ReportePeliculas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9f3b75d-073e-4c79-945c-234598e9d5d7">
+
+    <!-- Título -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30" uuid="89e5fc2c-7cf2-4b2c-9bb9-9876b6b2d6e9"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Películas]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Encabezados de la tabla -->
+    <columnHeader>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="200" height="20" uuid="a4329af6-3f23-4aa9-91f3-3e71b4d8e75b"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Nombre]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="0" width="200" height="20" uuid="69b27513-2d1e-4dcb-86e6-672a02cf7c22"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="400" y="0" width="155" height="20" uuid="a28cf635-2b07-4b30-bb96-801c1b423b77"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Copias]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- Detalles de la tabla -->
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="200" height="20" uuid="8f3c0efc-df6e-4e38-9109-d174b6d56d64"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="200" y="0" width="200" height="20" uuid="2b2b8169-4b30-4f7d-baa8-002a631b920f"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="400" y="0" width="155" height="20" uuid="a6c2b654-d83f-42d7-8d39-2ae83303748b"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{copias}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <!-- Pie de página -->
+    <pageFooter>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="20" uuid="dbb882d4-e6ab-4381-9393-97a9d191d6a5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="10"/>
+                </textElement>
+                <text><![CDATA[Generado por JasperReports]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+
+    <!-- Campos de la base de datos -->
+    <field name="nombre" class="java.lang.String">
+    <field name="estado" class="java.lang.String"/>
+    <field name="copias" class="java.lang.Integer"/>
+
+</jasperReport>
